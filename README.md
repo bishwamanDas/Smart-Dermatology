@@ -1,54 +1,251 @@
-# Melanoma Skin Cancer Detection
+# 🩺 Smart Dermatology – AI-Powered Skin Disease Detection System
 
-## Abstract
-In cancer, there are over 200 different forms. Out of 200, melanoma is the deadliest form of skin cancer. The diagnostic procedure for melanoma starts with clinical screening, followed by dermoscopic analysis and histopathological examination. Melanoma skin cancer is highly curable if it gets identified at the early stages. The first step of Melanoma skin cancer diagnosis is to conduct a visual examination of the skin's affected area. Dermatologists take the dermatoscopic images of the skin lesions by the high-speed camera, which have an accuracy of 65-80% in the melanoma diagnosis without any additional technical support. With further visual examination by cancer treatment specialists and dermatoscopic images, the overall prediction rate of melanoma diagnosis raised to 75-84% accuracy. The project aims to build an automated classification system based on image processing techniques to classify skin cancer using skin lesions images.
+A machine learning-based skin disease detection application developed using Python, TensorFlow/Keras, OpenCV, and Scikit-learn. The system analyzes skin lesion images and predicts potential skin diseases using trained CNN and SVM models through an interactive desktop GUI.
 
-## Problem Statement
- In the skin biopsy, the dermatologist takes some part of the skin lesion and examines it under the microscope. The current process takes almost a week or more, starting from getting a dermatologist appointment to getting a biopsy report.
- The aims to shorten the current gap to just a couple of days by providing the predictive model.
- The approach uses Convolutional Neural Network (CNN) to classify nine types of skin cancer from outlier lesions images. This reduction of a gap has the opportunity to impact millions of people positively.
+This project demonstrates image preprocessing, deep learning model development, machine learning classification, medical image analysis, and desktop application integration.
 
-## Motivation
-The overarching goal is to support the efforts to reduce the death caused by skin cancer. The primary motivation that drives the project is to use the advanced image classification technology for the well-being of the people. Computer vision has made good progress in machine learning and deep learning that are scalable across domains.
+---
 
-## Dataset
-The dataset consists of 2357 images of malignant and benign oncological diseases, which were formed from the International Skin Imaging Collaboration (ISIC). All images were sorted according to the classification taken with ISIC, and all subsets were divided into the same number of images.
+## 📊 Project Overview
 
-The data set contains the following diseases:
+The objective of this project is to assist in the early detection of skin diseases by analyzing uploaded skin images and providing disease predictions through a user-friendly graphical interface.
 
-![datasetdf](https://github.com/kshitij-raj/Melanoma-Skin-Cancer-Detection/blob/f143d178495ec6490ce2ee18c4cbbfb2e1388cea/Readme_images/Datasetdf.png)
+The application supports:
 
-![datasetplot](https://github.com/kshitij-raj/Melanoma-Skin-Cancer-Detection/blob/f143d178495ec6490ce2ee18c4cbbfb2e1388cea/Readme_images/DatasetPlot.png)
+* Image-based skin disease detection
+* CNN-based classification
+* SVM-based classification
+* Interactive desktop GUI
+* Automated image preprocessing
+* Disease prediction and diagnosis support
 
-To overcome the issue of class imbalance, used a python package  Augmentor (https://augmentor.readthedocs.io/en/master/) to add more samples across all classes so that none of the classes have very few samples.
+---
 
-### Sample image from Dataset
+## ✅ Key Highlights
 
-![sample image](https://github.com/kshitij-raj/Melanoma-Skin-Cancer-Detection/blob/b43daf05e84626d3796321e79caeb2f6f8179346/Readme_images/Samleimagefromdataset.png)
+* 🧠 Convolutional Neural Network (CNN) implementation
+* 📈 Support Vector Machine (SVM) classification
+* 🖼️ Image preprocessing and feature extraction
+* 🩺 Skin disease prediction system
+* ⚡ Real-time diagnosis through GUI
+* 📊 Model evaluation and comparison
+* 💾 Pre-trained model deployment using TensorFlow
+* 🎯 User-friendly desktop application
 
-## CNN Architecture Design
-To classify skin cancer using skin lesions images. To achieve higher accuracy and results on the classification task, I have built custom CNN model.
+---
 
-- Rescalling Layer - To rescale an input in the [0, 255] range to be in the [0, 1] range.
-- Convolutional Layer - Convolutional layers apply a convolution operation to the input, passing the result to the next layer. A convolution converts all the pixels in its receptive field into a single value. For example, if you would apply a convolution to an image, you will be decreasing the image size as well as bringing all the information in the field together into a single pixel. 
-- Pooling Layer - Pooling layers are used to reduce the dimensions of the feature maps. Thus, it reduces the number of parameters to learn and the amount of computation performed in the network. The pooling layer summarises the features present in a region of the feature map generated by a convolution layer.
-- Dropout Layer - The Dropout layer randomly sets input units to 0 with a frequency of rate at each step during training time, which helps prevent overfitting.
-- Flatten Layer - Flattening is converting the data into a 1-dimensional array for inputting it to the next layer. We flatten the output of the convolutional layers to create a single long feature vector. And it is connected to the final classification model, which is called a fully-connected layer.
-- Dense Layer - The dense layer is a neural network layer that is connected deeply, which means each neuron in the dense layer receives input from all neurons of its previous layer.
-- Activation Function(ReLU) - The rectified linear activation function or ReLU for short is a piecewise linear function that will output the input directly if it is positive, otherwise, it will output zero.The rectified linear activation function overcomes the vanishing gradient problem, allowing models to learn faster and perform better.
-- Activation Function(Softmax) - The softmax function is used as the activation function in the output layer of neural network models that predict a multinomial probability distribution. The main advantage of using Softmax is the output probabilities range. The range will 0 to 1, and the sum of all the probabilities will be equal to one.
+## 🧰 Tech Stack
 
-### Model Architecture
-![Model Arch](https://github.com/kshitij-raj/Melanoma-Skin-Cancer-Detection/blob/d8b2ca8cc296af14ab9aa7a6def31a7efc86271b/Readme_images/ModelLayer.png)
+### Machine Learning & Deep Learning
 
-### Model Evaluation
-![ModelEvaluation](https://github.com/kshitij-raj/Melanoma-Skin-Cancer-Detection/blob/7e7a17d3c891bf12be42385979168135775654c4/Readme_images/ModelEvaluation.png)
+* Python
+* TensorFlow
+* Keras
+* Scikit-learn
+* NumPy
+* Pandas
 
-## References
-Melanoma Skin Cancer from https://www.cancer.org/cancer/melanoma-skin-cancer/about/what-is-melanoma.html
+### Image Processing
 
-Introduction to CNN from https://www.analyticsvidhya.com/blog/2021/05/convolutional-neural-networks-cnn/
+* OpenCV
+* Pillow
 
-Image classification using CNN from https://www.analyticsvidhya.com/blog/2020/02/learn-image-classification-cnn-convolutional-neural-networks-3-datasets/
+### Visualization
 
-Efficient way to build CNN architecture from https://towardsdatascience.com/a-guide-to-an-efficient-way-to-build-neural-network-architectures-part-ii-hyper-parameter-42efca01e5d7
+* Matplotlib
+
+### Desktop Application
+
+* Tkinter
+
+---
+
+## 🔬 Project Workflow
+
+### 1. 📂 Dataset Preparation
+
+A skin disease image dataset was collected and organized into training and testing sets.
+
+The preprocessing pipeline includes:
+
+* Image loading
+* Image resizing
+* Normalization
+* Data preparation for model training
+* Dataset visualization and analysis
+
+---
+
+### 2. 🧠 CNN Model Development
+
+A Convolutional Neural Network was designed and trained to identify skin diseases from image inputs.
+
+Model capabilities include:
+
+* Feature extraction using convolution layers
+* Pattern learning from skin lesion images
+* Disease classification
+* Prediction generation
+
+The trained model was exported as:
+
+```text
+model.h5
+```
+
+for deployment within the application.
+
+---
+
+### 3. 📈 SVM Model Development
+
+A Support Vector Machine model was trained and evaluated alongside the CNN model.
+
+Key objectives:
+
+* Feature-based classification
+* Performance comparison with CNN
+* Alternative prediction approach
+
+The trained model was saved as:
+
+```text
+svm_model.pkl
+```
+
+---
+
+### 4. 🖥️ Desktop Application Integration
+
+The trained models were integrated into a graphical desktop application.
+
+Application features include:
+
+* Image upload functionality
+* Disease diagnosis
+* Prediction display
+* Interactive user interface
+* Fast local execution
+
+Workflow:
+
+1. User selects an image.
+2. Image is preprocessed.
+3. Model performs prediction.
+4. Predicted disease is displayed.
+5. Diagnosis information is presented to the user.
+
+---
+
+## 📈 Features Implemented
+
+### Data Processing
+
+* Image preprocessing
+* Dataset preparation
+* Data visualization
+
+### Machine Learning
+
+* CNN training
+* SVM training
+* Model comparison
+
+### Application Development
+
+* Desktop GUI implementation
+* Image upload system
+* Prediction engine
+* Result visualization
+
+### Deployment
+
+* Model serialization
+* Local application deployment
+* Pre-trained model integration
+
+---
+
+## 📁 Project Structure
+
+```text
+Smart-Dermatology
+│
+├── Smart_Dematology.py
+├── model.h5
+├── svm_model.pkl
+├── README.md
+│
+├── Practice_Model
+│   ├── PracticeModels.ipynb
+│
+├── Readme_images
+│   ├── DatasetPlot.png
+│   ├── Datasetdf.png
+│   ├── ModelArch.png
+│   ├── ModelEvaluation.png
+│   └── Samleimagefromdataset.png
+│
+├── Skin Cancer Detector.ipynb
+├── Skin Disease Detection CNN.ipynb
+├── Skin Disease Detection SVM.ipynb
+├── Compare model.ipynb
+└── using SVM.ipynb
+```
+
+---
+
+## ▶️ Running the Project
+
+### Install Dependencies
+
+```bash
+pip install tensorflow keras numpy pandas matplotlib pillow scikit-learn opencv-python
+```
+
+### Run Application
+
+```bash
+python Smart_Dematology.py
+```
+
+### Application Workflow
+
+1. Launch the application.
+2. Click **Choose** to select a skin image.
+3. Click **Diagnose**.
+4. View the predicted skin disease.
+
+---
+
+## 📊 Model Components
+
+### CNN Model
+
+* Deep learning-based image classification
+* Trained using TensorFlow/Keras
+* Saved as `model.h5`
+
+### SVM Model
+
+* Machine learning classification model
+* Trained using Scikit-learn
+* Saved as `svm_model.pkl`
+
+---
+
+## 🚀 Future Improvements
+
+* Higher accuracy through larger datasets
+* Multi-disease classification support
+* Cloud deployment
+* Web-based interface
+* Explainable AI visualizations
+* Mobile application integration
+* Real-time dermatologist assistance
+
+---
+
+## 📬 Contact
+
+Made with ❤️ by **Bishwaman Das**
