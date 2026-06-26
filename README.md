@@ -171,7 +171,7 @@ Workflow:
 ```text
 Smart-Dermatology
 │
-├── Smart_Dematology.py
+├── Smart_Dermatology.py
 ├── model.h5
 ├── svm_model.pkl
 ├── README.md
@@ -206,7 +206,7 @@ pip install tensorflow keras numpy pandas matplotlib pillow scikit-learn opencv-
 ### Run Application
 
 ```bash
-python Smart_Dematology.py
+python Smart_Dermatology.py
 ```
 
 ### Application Workflow
